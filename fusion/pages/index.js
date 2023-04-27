@@ -1,8 +1,18 @@
 import { Inter } from 'next/font/google'
+import { useState,useEffect } from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+
+  const [productsInfo, setProductsInfo] = useState([]);
+  useEffect(() => {
+    fetch('/api/products')
+    .then(response => response.json())
+    .then(json => setProductsInfo(json));
+  }, []);
+
+  
   return (
   <div className='p-5'>
     <h2 className='text-3xl text-center text-[#6C534E]'>In-store products</h2>
