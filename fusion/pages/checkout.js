@@ -7,18 +7,30 @@ import {useState} from "react";
 
 export default function checkoutPage(){
     const {selectedProducts} = useContext(ProductsContext);
-    const [productsInfo,setProductsInfo] = useState ([]);
+    const [productsInfos,setProductsInfos] = useState ([]);
     useEffect( () => {
         const uniqIds = [...new Set(selectedProducts)];
-        fetch ('api/products?ids='+uniqIds.join(','))
+    fetch('api/products?ids='+uniqIds.join(','))
         .then(response => response.json())
-        .then(json => setProductsInfo(json));
+        .then(json => setProductsInfos(json));
     },[selectedProducts]);
 
     
     return(
         <Layout>
-            {selectedProducts.join(',')}
+            {!productsInfos.length && (
+                <div>No products in your shopping cart</div>
+
+            )}
+            {productsInfos.length && productsInfos.map
+            (productInfo => (
+                <div>
+                    {productInfo.name}
+
+                </div>
+
+            )
+            )}
         </Layout>
     );
 }
