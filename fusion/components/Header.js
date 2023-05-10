@@ -8,12 +8,12 @@ import { ProductsContext } from './ProductsContext';
 
 
  
- export default function Footer(){
+ export default function Header(){
     const router = useRouter();
     const path = router.pathname;
     const {selectedProducts} = useContext(ProductsContext);   
     return(
-        <footer className="sticky bottom-0 bg-white p-2 w-full flex border-t border-gray-200 justify-center space-x-12 text-gray-500">
+        <header className="sticky bottom-0 bg-white p-2 w-full flex border-t border-gray-200 justify-center space-x-12 text-gray-500">
                 <Link href={'/'}>
                     <div className={(path === '/' ? 'text-[#C89FA3]' : '')+" flex justify-center items-center flex-col"} >
                     <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -33,6 +33,6 @@ import { ProductsContext } from './ProductsContext';
                 <span>Cart {selectedProducts.length}</span>
                 </Link>
 
-        </footer>
+        </header>
     );
  }

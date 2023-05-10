@@ -4,7 +4,7 @@ import Product from '../components/Product'
 // import product from '@/models/product';
 import { initMongoose } from '@/lib/mongoose';
 import { findAllproducts } from './api/products';
-import Footer from '@/components/Footer';
+// import Footer from '@/components/Header';
 import Layout from '@/components/Layout';
 
 const inter = Inter({ subsets: ['latin'] })
