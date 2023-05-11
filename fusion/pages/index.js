@@ -31,8 +31,9 @@ export default function Home({products}) {
 
   return (
   <Layout>
+    <input value={phrase} onChange={e => setPhrase(e.target.value)} type="text" placeholder='Search for wallpaper...' className='bg-gray-200 w-45 py-2 px-4 rounded-xl right-0'></input>
     <h2 className='text-3xl text-center text-[#6C534E]'>In-store products</h2>
-    <input value={phrase} onChange={e => setPhrase(e.target.value)} type="text" placeholder='Search for wallpaper...' className='bg-gray-200 w-45 py-2 px-4 rounded-xl'></input>
+   
     <div className ='flex flex-wrap'>
     {products.map(productInfo =>(
       <div key={productInfo._id} className='px-5'> 
