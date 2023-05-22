@@ -15,19 +15,19 @@ import { ProductsContext } from './ProductsContext';
     const path = router.pathname;
     const {selectedProducts} = useContext(ProductsContext);   
     return(
-        <header className="m-5 flex justify-between h-24">
-           <Image
+        <header className="m-5 justify-between  h-18 bg-gray-200">
+           {/* <Image
             src={logo}
             alt="Picture of logo"
             width="192px"
             height="192px"
-            />
+            /> */}
             {/* <div className='w-100'>
                 <img src={logo} alt="Picture of logo" />
             </div> */}
             
             
-            <nav className="flex space-x-10 text-gray-500"> 
+            <nav className="flex justify-end space-x-10 text-gray-500"> 
             <Link href={'/'}>
                     <div className={(path === '/' ? 'text-[#C89FA3]' : '')+" flex justify-center items-center flex-col"} >
                     <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
