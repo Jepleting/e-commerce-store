@@ -5,7 +5,7 @@ import {useState} from "react";
 
 
 
-export default function checkoutPage(){
+export default function CheckoutPage(){
     const {selectedProducts, setSelectedProducts} = useContext(ProductsContext);
     const [productsInfos,setProductsInfos] = useState ([]);
     const [address,setAddress] = useState ([]);
