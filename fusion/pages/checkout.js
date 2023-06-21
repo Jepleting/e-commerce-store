@@ -59,7 +59,7 @@ export default function CheckoutPage(){
             )}
             {productsInfos.length && productsInfos.map
             (productInfo => (
-                <div className="flex mb-5 key={productInfo._id}">
+                <div className="flex mb-5" key={productInfo._id}>
                     <div className="bg-gray-200 p-3 rounded-xl shrink-0">
                         <Image className="w-24" src={productInfo.picture} alt="" width={700} height={700}/>
                     </div>
