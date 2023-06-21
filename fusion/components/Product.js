@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import {ProductsContext} from "./ProductsContext";
+import Image from "next/image";
 
 
 
@@ -13,7 +14,10 @@ export default function Product({_id,name,price,picture}){
 
         <div className='py-4'>
         <div className='w-64'>
-          <img src={picture} alt="" />
+          <Image src={picture} 
+          alt=""
+          width={700}
+          height={700} />
         </div>
         <div className='mt-2 shadow-xl h-40 w-64 text-center' >
           <h3 className='font-bold text-lg'>{name}</h3>
